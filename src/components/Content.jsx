@@ -1,7 +1,12 @@
+import Navbar from "./Navbar";
+
 function Content() {
   return (
-    <div>Content</div>
-  )
+    <main className="flex-auto">
+      <Navbar />
+      Content
+    </main>
+  );
 }
 
-export default Content
+export default Content;
