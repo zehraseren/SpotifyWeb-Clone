@@ -12,7 +12,7 @@ function Menu() {
             <span>
               <Icon name="home" />
             </span>
-            Anasayfa
+            Ana sayfa
           </a>
         </li>
       </ul>
