@@ -3,7 +3,7 @@ import Menu from "./Sidebar/Menu";
 function Sidebar() {
   return (
     <div className="w-60 py-6 flex flex-col">
-      <a className="mb-5 px-6">
+      <a className="mb-7 px-6">
         <img src="/src/assets/logo.svg" alt="" className="h-9" />
       </a>
       <Menu />
