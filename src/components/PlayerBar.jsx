@@ -1,6 +1,6 @@
 function PlayerBar() {
   return (
-    <div>PlayerBar</div>
+    <div className="h-24">PlayerBar</div>
   )
 }
 
