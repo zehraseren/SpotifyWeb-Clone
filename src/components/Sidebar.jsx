@@ -5,7 +5,7 @@ import DownloadApp from "./Sidebar/DownloadApp";
 
 function Sidebar() {
   return (
-    <aside className="w-60 pt-6 flex flex-col bg-black">
+    <aside className="w-60 pt-6 flex flex-col flex-shrink-0 bg-black">
       <a className="mb-7 px-6">
         <img src="/src/assets/logo.svg" alt="" className="h-9" />
       </a>
@@ -42,7 +42,6 @@ function Sidebar() {
       <Playlists />
 
       <DownloadApp />
-      
     </aside>
   );
 }

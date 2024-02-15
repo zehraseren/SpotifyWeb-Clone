@@ -8,7 +8,7 @@ function Content() {
   return (
     <main className="flex-auto">
       <Navbar />
-      <div className="px-8 pt-2">
+      <div className="px-8 pt-4">
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
