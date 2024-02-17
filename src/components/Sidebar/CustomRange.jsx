@@ -8,7 +8,7 @@ function CustomRange({ value, step, min, max, onChange }) {
       step={step}
       min={min}
       max={max}
-      onChange={onChange}
+      onChange={values => onChange(values[0])}
       renderTrack={({ props, children }) => (
         <div
           className="w-full h-7 flex group"
