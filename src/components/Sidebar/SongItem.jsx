@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
-import Song from "../Song";
+import Song from "../../Song";
 
 function SongItem({ title, more = false, items }) {
   return (

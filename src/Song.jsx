@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
-import { Icon } from "../../Icons";
+import { Icon } from "./Icons";
 
 function Song({ item }) {
   const imageStyle = (item) => {
