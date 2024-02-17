@@ -3,7 +3,7 @@
 import { Icon } from "../../Icons";
 import { useAudio } from "react-use";
 import { secondsToTime } from "../../utils";
-import CustomRange from "../Sidebar/CustomRange";
+import CustomRange from "../CustomRange";
 import { useMemo } from "react";
 
 function Player() {
