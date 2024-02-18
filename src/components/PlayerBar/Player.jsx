@@ -4,12 +4,25 @@ import { Icon } from "../../Icons";
 import { useAudio } from "react-use";
 import { secondsToTime } from "../../utils";
 import CustomRange from "../CustomRange";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setControls } from "../../stores/playerSlice";
 
 function Player() {
+  const dispatch = useDispatch();
+  const { current } = useSelector((state) => state.player);
+
   const [audio, state, controls, ref] = useAudio({
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    src: current?.src,
   });
+
+  useEffect(() => {
+    controls.play;
+  }, [current]);
+
+  useEffect(() => {
+    dispatch(setControls(controls));
+  }, []);
 
   const volumeIcon = useMemo(() => {
     if (state.volume === 0 || state.muted) {
@@ -18,7 +31,7 @@ function Player() {
     if (state.volume > 0 && state.volume < 0.33) {
       return "volumeLow";
     }
-    if (state.volume > 0.33 && state.volume < 0.66) {
+    if (state.volume >= 0.33 && state.volume < 0.66) {
       return "volumeNormal";
     }
     return "volumeFull";
@@ -48,7 +61,7 @@ function Player() {
             <Icon name="repeat" size={16} />
           </button>
         </div>
-        <div className="w-full flex items-center gap-x-2">
+        <div className="w-full flex items-center mt-1.5 gap-x-2">
           {audio}
           <div className="text-[0.688rem text-white text-opacity-70">
             {secondsToTime(state?.time)}

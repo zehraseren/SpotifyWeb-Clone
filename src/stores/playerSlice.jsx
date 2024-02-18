@@ -22,6 +22,6 @@ export const playerSlice = createSlice({
   },
 });
 
-export const { setCurrent, setControls, se } = playerSlice.actions;
+export const { setCurrent, setControls, setPlaying } = playerSlice.actions;
 
 export default playerSlice.reducer;
