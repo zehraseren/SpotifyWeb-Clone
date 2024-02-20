@@ -6,11 +6,11 @@ import { secondsToTime } from "../../utils";
 import CustomRange from "../CustomRange";
 import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setControls } from "../../stores/playerSlice";
+import { setControls, setSidebar } from "../../stores/playerSlice";
 
 function Player() {
   const dispatch = useDispatch();
-  const { current } = useSelector((state) => state.player);
+  const { current, sidebar } = useSelector((state) => state.player);
 
   const [audio, state, controls, ref] = useAudio({
     src: current?.src,
@@ -39,8 +39,38 @@ function Player() {
 
   return (
     <div className="flex px-4 justify-between items-center h-full">
-      <div className="min-w-[11.25rem] w-[30%]">sol</div>
-      <div className="flex flex-col items-center">
+      <div className="min-w-[11.25rem] w-[30%]">
+        {current && (
+          <div className="flex items-center">
+            <div className="flex items-center mr-3">
+              {!sidebar && (
+                <div className="w-14 h-14 mr-3 flex-shrink-0 relative group">
+                  <img src={current.img} alt="" />
+                  <button
+                    onClick={() => dispatch(setSidebar(true))}
+                    className="w-6 h-6 bg-black flex items-center justify-center rotate-90 rounded-full absolute top-1 right-1 opacity-0 group-hover:opacity-60 hover:!opacity-100 hover:scale-[1.06]"
+                  >
+                    <Icon name="arrowLeft" size={16} />
+                  </button>
+                </div>
+              )}
+              <div>
+                <h6 className="text-sm line-clamp-1">{current.title}</h6>
+                <p className="text-[0.688rem] text-white text-opacity-70">
+                  {current.artist}
+                </p>
+              </div>
+            </div>
+            <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+              <Icon name="heart" size={16} />
+            </button>
+            <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+              <Icon name="pictureInPicture" size={16} />
+            </button>
+          </div>
+        )}
+      </div>
+      <div className="max-w-[45.125rem] w-[40%] px-4 flex flex-col items-center">
         <div className="flex items-center gap-x-2">
           <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon name="shuffle" size={16} />
@@ -63,7 +93,7 @@ function Player() {
         </div>
         <div className="w-full flex items-center mt-1.5 gap-x-2">
           {audio}
-          <div className="text-[0.688rem text-white text-opacity-70">
+          <div className="text-[0.688rem] text-white text-opacity-70">
             {secondsToTime(state?.time)}
           </div>
           <CustomRange
@@ -73,7 +103,7 @@ function Player() {
             value={state?.time}
             onChange={(value) => controls.seek(value)}
           />
-          <div className="text-[0.688rem text-white text-opacity-70">
+          <div className="text-[0.688rem] text-white text-opacity-70">
             {secondsToTime(state?.duration)}
           </div>
         </div>
@@ -100,7 +130,9 @@ function Player() {
             min={0}
             max={1}
             value={state.muted ? 0 : state?.volume}
-            onChange={(value) => controls.volume(value)}
+            onChange={(value) => {
+              controls.unmute(), controls.volume(value);
+            }}
           />
         </div>
         <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
