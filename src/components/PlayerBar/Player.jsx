@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { Icon } from "../../Icons";
@@ -6,7 +7,7 @@ import { secondsToTime } from "../../utils";
 import CustomRange from "../CustomRange";
 import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setControls, setSidebar } from "../../stores/playerSlice";
+import { setControls, setPlaying, setSidebar } from "../../stores/playerSlice";
 
 function Player() {
   const dispatch = useDispatch();
@@ -18,7 +19,11 @@ function Player() {
 
   useEffect(() => {
     controls.play;
-  }, [current]);
+  }, [controls.play, current]);
+
+  useEffect(() => {
+    dispatch(setPlaying(state.playing));
+  }, [dispatch, state.playing]);
 
   useEffect(() => {
     dispatch(setControls(controls));
