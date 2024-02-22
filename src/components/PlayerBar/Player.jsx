@@ -75,7 +75,7 @@ function Player() {
           </div>
         )}
       </div>
-      <div className="max-w-[45.125rem] w-[40%] px-4 flex flex-col items-center">
+      <div className="max-w-[45.125rem] w-[40%] pt-2 px-4 flex flex-col items-center">
         <div className="flex items-center gap-x-2">
           <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon name="shuffle" size={16} />
