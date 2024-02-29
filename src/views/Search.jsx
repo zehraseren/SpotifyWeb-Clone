@@ -6,8 +6,8 @@ import favoriteCategories from "../components/data/favoriteCategories";
 import ScrollContainer from "react-indiana-drag-scroll";
 import { useEffect, useRef, useState } from "react";
 import { Icon } from "../Icons";
-import Category from "~/components/CategoryItem";
-import WideCategory from "~/components/WideCategoryItem";
+import Category from "../components/CategoryItem";
+import WideCategory from "../components/WideCategoryItem";
 
 function Search() {
   const favoritesRef = useRef();
