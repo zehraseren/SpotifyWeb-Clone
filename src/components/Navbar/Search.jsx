@@ -4,7 +4,7 @@ function Search() {
   return (
     <div className="mr-auto ml-4 relative">
       <label
-        className="w-12 h-10 flex items-center justify-center absolute top-0 left-0 text-black"
+        className="w-12 h-10 flex items-center justify-center absolute top-0 left-0 text-black font-semibold"
         htmlFor="search-input"
       >
         <Icon name="search" size={24} />
