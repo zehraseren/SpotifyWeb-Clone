@@ -11,7 +11,7 @@
   - React Indiana Drag Scroll
   - Headless UI
     
- [Live👆](https://spotify-web-clone-nine.vercel.app/)
+<a href="https://spotify-web-clone-nine.vercel.app/" target="_blank">Live👆<a/>
 *** 
 ![Ekran görüntüsü 2024-03-01 040625](https://github.com/zehraseren/SpotifyWeb-Clone/assets/94180168/cf132177-0a23-4094-8999-5bc0cd73a771)
 ![Ekran görüntüsü 2024-03-01 040635](https://github.com/zehraseren/SpotifyWeb-Clone/assets/94180168/27b62500-f213-411a-bda3-0b9a30c2a476)
