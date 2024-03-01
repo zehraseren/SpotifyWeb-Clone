@@ -1,4 +1,4 @@
-- Tayfun Erbilen'in Spotify - Clone eğitiminden referans alınarak bu oluşturulmuştur.
+- [Tayfun Erbilen'in Spotify - Clone](https://youtube.com/playlist?list=PLs3xcd94S4kG_Ma_uqEATj3n0Gqal6uFt&si=Ku4J67fTtPG1_Yqu) eğitiminden referans alınarak bu oluşturulmuştur.
 - Projece Kullanılan Teknolojiler:
   - Redux
   - React Icons
