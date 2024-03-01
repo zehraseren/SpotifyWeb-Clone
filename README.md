@@ -1,8 +1,18 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Tayfun Erbilen'in Spotify - Clone eğitiminden referans alınarak bu oluşturulmuştur.
+- Projece Kullanılan Teknolojiler:
+  - Redux
+  - React Icons
+  - Tailwind CSS
+  - Tailwind Line Clamp
+  - Tailwind Aspect Ratio
+  - React Use
+  - React Router
+  - React Range
+  - React Indiana Drag Scroll
+  - Headless UI
+    
+ [Live👆](https://spotify-web-clone-sable.vercel.app/)
+*** 
+![Ekran görüntüsü 2024-03-01 040625](https://github.com/zehraseren/SpotifyWeb-Clone/assets/94180168/cf132177-0a23-4094-8999-5bc0cd73a771)
+![Ekran görüntüsü 2024-03-01 040635](https://github.com/zehraseren/SpotifyWeb-Clone/assets/94180168/27b62500-f213-411a-bda3-0b9a30c2a476)
+![Ekran görüntüsü 2024-03-01 040648](https://github.com/zehraseren/SpotifyWeb-Clone/assets/94180168/6dd99eea-85a6-41ed-a470-026ef7969b19)
